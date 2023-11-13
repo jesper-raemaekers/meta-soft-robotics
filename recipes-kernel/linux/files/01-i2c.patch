@@ -1,0 +1,46 @@
+diff --git a/arch/arm/boot/dts/bcm2711-rpi-4-b.dts b/arch/arm/boot/dts/bcm2711-rpi-4-b.dts
+index c9ec59538c99..1334a3763670 100644
+--- a/arch/arm/boot/dts/bcm2711-rpi-4-b.dts
++++ b/arch/arm/boot/dts/bcm2711-rpi-4-b.dts
+@@ -58,6 +58,41 @@ sd_vcc_reg: sd_vcc_reg {
+ 	};
+ };
+ 
++&i2c1 {
++	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c1_pins>;
++	clock-frequency = <400000>;
++};
++
++&i2c3 {
++	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c3_pins>;
++	clock-frequency = <400000>;
++};
++
++&i2c4 {
++	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c4_pins>;
++	clock-frequency = <400000>;
++};
++
++&i2c5 {
++	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c5_pins>;
++	clock-frequency = <400000>;
++};
++
++&i2c6 {
++	status = "okay";
++	pinctrl-names = "default";
++	pinctrl-0 = <&i2c6_pins>;
++	clock-frequency = <1000000>;
++};
++
+ &bt {
+ 	shutdown-gpios = <&expgpio 0 GPIO_ACTIVE_HIGH>;
+ };
